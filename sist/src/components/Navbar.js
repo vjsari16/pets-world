@@ -35,6 +35,9 @@ export default function Navbar() {
                             <li className="nav-item ">
                                 <a className="nav-link" href="/cart">Cart {cartstate.cartItems.length}</a>
                             </li>
+                            <li className="nav-item  ">
+                                <a className="nav-link" href="/add">Form </a>
+                            </li>
                         </ul>
                     </div>
                 </nav>
