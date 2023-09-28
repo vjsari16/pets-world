@@ -1,0 +1,49 @@
+.divStyle {
+    background-image: url('https://img.freepik.com/free-photo/wooden-board-empty-table-top-blurred-background_1253-1584.jpg?size=626&ext=jpg&ga=GA1.1.1677326305.1675962342&semt=ais');
+    background-size: cover;
+    background-color: #007bff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .containerStyle {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-image: url("https://images.pexels.com/photos/1939485/pexels-photo-1939485.jpeg?auto=compress&cs=tinysrgb&w=600");
+    background-color: #dfb1b1;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .inputStyle {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .labelStyle {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .buttonStyle {
+    background-color: #4186ca;
+    color: #fff;
+    padding: 10px 20px;
+    border: whitesmoke;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .buttonStyle:hover {
+    background-color: #0056b3;
+  }
