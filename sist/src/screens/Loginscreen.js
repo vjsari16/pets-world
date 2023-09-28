@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
 import './login.css';
+import Homescreen from './Homescreen';
+import { useHistory } from 'react-router-dom';
 
 const Login = () => {
   const [formData, setFormData] = useState({
-    username: 'vijay123',
-    password: '512345',
+    username: '',
+    password: '',
   });
+
+  const [loggedIn, setLoggedIn] = useState(false); // Track login status
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -14,13 +18,23 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // In a real application, you would send the login data to a server for authentication.
+    // For this example, we're just checking if the username and password are "demo" and "password".
+
+    if (formData.username === 'Vijay' && formData.password === 'password') {
+      setLoggedIn(true);
+    } else {
+      setLoggedIn(false);
+      alert('Invalid username or password');
+    }
   };
 
-  const containerStyle = {
-    
+  const logout = () => {
+    setLoggedIn(false);
   };
 
-
+  const containerStyle = {};
 
   const inputStyle = {
     width: '100%',
@@ -47,35 +61,45 @@ const Login = () => {
     transition: 'background-color 0.3s ease',
   };
 
-
   return (
     <div className='divStyle'>
-        <div style={containerStyle}>
-        <h2>Login</h2>
-        <form onSubmit={handleSubmit}>
-            <div style={labelStyle}>Username</div>
-            <input
-            type="text"
-            name="username"
-            value={formData.username}
-            onChange={handleChange}
-            required
-            style={inputStyle}
-            />
-            <div style={labelStyle}>Password</div>
-            <input
-            type="password"
-            name="password"
-            value={formData.password}
-            onChange={handleChange}
-            required
-            style={inputStyle}
-            />
-            <button type="submit" style={buttonStyle}>
-            Login
+      <div style={containerStyle}>
+        {loggedIn ? (
+          <div>
+            <h2>Welcome, {formData.username}!</h2>
+            <button onClick={Homescreen} style={buttonStyle}>
+              Shop Now
             </button>
-        </form>
-        </div>
+          </div>
+        ) : (
+          <div>
+            <h2>Login</h2>
+            <form onSubmit={handleSubmit}>
+              <div style={labelStyle}>Username</div>
+              <input
+                type="text"
+                name="username"
+                value={formData.username}
+                onChange={handleChange}
+                required
+                style={inputStyle}
+              />
+              <div style={labelStyle}>Password</div>
+              <input
+                type="password"
+                name="password"
+                value={formData.password}
+                onChange={handleChange}
+                required
+                style={inputStyle}
+              />
+              <button type="submit" style={buttonStyle}>
+                Login
+              </button>
+            </form>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

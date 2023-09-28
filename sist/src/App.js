@@ -8,7 +8,8 @@ import Cartscreen from './screens/Cartscreen';
 import Loginscreen from './screens/Loginscreen';
 import Freshjuice from './screens/Freshjuice';
 import Home from './screens/Home';
-import form from './admin/form'
+import form from './admin/form';
+import Mainscreen from './screens/Mainscreen';
 
 
 function App() {
@@ -17,11 +18,11 @@ function App() {
       <Navbar />
       <BrowserRouter>
         <Routes>
-          <Route path="/" exact Component={Home}/>
+          <Route path="/" exact Component={Mainscreen}/>
           <Route path="/cart" exact Component={Cartscreen}/>
           <Route path="/login" exact Component={Loginscreen}/>
           <Route path="/Drinks" exact Component={Freshjuice}/>
-          <Route path="/Foods" exact Component={Homescreen}/>
+          <Route path="/Products" exact Component={Homescreen}/>
           <Route path="/home" exact Component={Home}/>
           <Route path="/add" exact Component={form}/>
         </Routes>

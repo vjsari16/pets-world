@@ -32,7 +32,7 @@ class ProductRegistrationForm extends Component {
 
   render() {
     return (
-        <div className='form-pad' style={{paddingTop:"60px"}}>
+        <div className='form-pad' style={{paddingTop:"80px"}}>
             <div className="product-registration-form">
                 <h2>Pets For Sale</h2>
                 <form onSubmit={this.handleSubmit}>

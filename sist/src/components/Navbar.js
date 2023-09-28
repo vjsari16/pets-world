@@ -8,7 +8,7 @@ export default function Navbar() {
             <div  style={{ backgroundColor:"grey"}}>
                 <nav className="navbar navbar-expand-lg px-4  " >
 
-                    <a className="navbar-brand" href="#">Pets-World</a>
+                    <a className="navbar-brand" href="/">Pets-World</a>
                     <button className="navbar-toggler" 
                         type="button" 
                         data-toggle="collapse" 
@@ -27,7 +27,7 @@ export default function Navbar() {
                                 <a className="nav-link" href="/home">Home </a>
                             </li>
                             <li className="nav-item  ">
-                                <a className="nav-link" href="/Foods">Puppies </a>
+                                <a className="nav-link" href="/Products">Puppies </a>
                             </li>
                             <li className="nav-item  ">
                                 <a className="nav-link" href="/Drinks">Other </a>
