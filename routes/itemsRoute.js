@@ -15,4 +15,23 @@ router.get("/getallitems",async(req,res)=>{
     
 });
 
+router.post('/createpet', async(req, res)=>{
+    console.log(req.body)
+    try {
+        const item = await Item.create({
+            name: req.body.name,
+            category: req.body.category,
+            prices: req.body.prices,
+            varients: req.body.varients,
+            description: req.body.description,
+            image: req.body.image
+        })
+        res.json(item)
+    } catch (err) {
+        console.log(err)
+    }
+})
+
 module.exports = router;
+
+
