@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './form.css'; // Import the CSS file for styling
+import './form.css'; 
 
 class ProductRegistrationForm extends Component {
   constructor(props) {
@@ -20,8 +20,7 @@ class ProductRegistrationForm extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    // Send the form data to the backend or perform any necessary actions.
-    // You can replace the console.log statements with actual data handling logic.
+
     console.log('Submitted Data:');
     console.log('Variant:', this.state.variant);
     console.log('Category:', this.state.category);

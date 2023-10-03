@@ -9,7 +9,7 @@ const Login = () => {
     password: '',
   });
 
-  const [loggedIn, setLoggedIn] = useState(false); // Track login status
+  const [loggedIn, setLoggedIn] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -19,8 +19,6 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // In a real application, you would send the login data to a server for authentication.
-    // For this example, we're just checking if the username and password are "demo" and "password".
 
     if (formData.username === 'Vijay' && formData.password === 'password') {
       setLoggedIn(true);
@@ -67,9 +65,7 @@ const Login = () => {
         {loggedIn ? (
           <div>
             <h2>Welcome, {formData.username}!</h2>
-            <button onClick={Homescreen} style={buttonStyle}>
-              Shop Now
-            </button>
+            <a href="/products" className="btn" onClick={Homescreen}>Shop Now</a>
           </div>
         ) : (
           <div>

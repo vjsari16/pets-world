@@ -1,5 +1,5 @@
 import React from 'react';
-import './Mainscreen.css'; // Import the CSS file for styling
+import './Mainscreen.css';
 import Homescreen from './Homescreen';
 
 function Mainscreen() {
@@ -33,10 +33,8 @@ function Mainscreen() {
           <span className="price">$29.99</span><br></br>
         </div>
 
-        {/* Add more product cards here */}
       </section>
 
-      {/* Contact Us section */}
       <footer className="contact-us">
         <h2>Contact Us</h2>
         <p>If you have any questions or need assistance, feel free to reach out to us.</p>

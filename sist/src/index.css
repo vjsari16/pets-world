@@ -33,3 +33,27 @@ select{
 .navbar-expand-lg{
   background-color: rgb(0, 0, 0, 0) !important;
 }
+.fa-plus{
+  color:green
+}
+.fa-minus{
+  color: blue;
+}
+.fa-trash{
+  color:red
+}
+.check-btn{
+    background-Color: '#007bff';
+    color: whitesmoke;
+    padding: '10px 20px';
+    border: 'white';
+    margin-Bottom: '50px';
+    border-Radius: '3px';
+    border-color: gray;
+    cursor: 'pointer';
+    font-Weight: 'bold';
+    transition: 'background-color 0.3s ease';
+  }
+  .flex-container{
+    margin-top: 50px;
+  }

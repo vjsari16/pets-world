@@ -1,6 +1,5 @@
 export const getAllItemsReducer = (state = { items: [] }, action) => {
 
-    // eslint-disable-next-line default-case
     switch (action.type) {
         case 'GET_ITEMS_REQUEST':
             return {
